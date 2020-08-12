@@ -15,7 +15,8 @@ def start():
 def solved():
     #checks is challenge exists, if true then it pushes the challenge to GitHub
     if os.path.isdir(path):
-        os.system("git add *")
+        os.system("cd ..")
+        os.system("git add %s" % directory)
         os.system("git commit -m 'solved challange %s'" % directory)
         print("Solved and commited %s, need to push to GitHub" % directory)
     else:
